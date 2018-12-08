@@ -1,5 +1,11 @@
-<h2>Lista de Ecuaciones</h2>
-
-<div *ngFor="let equation of equations">
-  {{equation.name}}
-</div>
+<mat-card>
+  <mat-card-title>Car List</mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let equation of equations">
+        <img mat-list-avatar src="{{equation.giphyUrl}}" alt="{{equation.name}}">
+        <h3 mat-line>{{equation.name}}</h3>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
