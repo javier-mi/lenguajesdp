@@ -9,4 +9,11 @@ spring:
     username: sa
     password: 
    
+
  
+#Deshabilitado por el momento 
+#spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration
+#security.user.username: admin 
+# security.user.password: admin
+spring.security.user.name: admin
+spring.security.user.password: admin
