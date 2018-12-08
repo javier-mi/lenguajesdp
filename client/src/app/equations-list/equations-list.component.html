@@ -1,11 +1,15 @@
 <mat-card>
-  <mat-card-title>Car List</mat-card-title>
+  <mat-card-title>Listado de ecuaciones</mat-card-title>
   <mat-card-content>
     <mat-list>
       <mat-list-item *ngFor="let equation of equations">
         <img mat-list-avatar src="{{equation.giphyUrl}}" alt="{{equation.name}}">
-        <h3 mat-line>{{equation.name}}</h3>
+        <h3 mat-line>
+          <a mat-button [routerLink]="['/equations-edit', equation.id]">{{equation.name}}</a>
+        </h3>
       </mat-list-item>
     </mat-list>
   </mat-card-content>
+  
+  <button mat-fab color="primary" [routerLink]="['/equation-add']">Add</button>
 </mat-card>

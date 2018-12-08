@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EquationsService } from '../shared/equations/equations.service';
+import { GiphyService } from '../shared/giphy/giphy.service';
 
 @Component({
   selector: 'app-equations-list',
@@ -9,11 +10,14 @@ import { EquationsService } from '../shared/equations/equations.service';
 export class EquationsListComponent implements OnInit {
   equations: Array<any>;
 
-  constructor(private equationsService: EquationsService) { }
+  constructor(private equationsService: EquationsService, private giphyService: GiphyService) { }
 
   ngOnInit() {
     this.equationsService.getAll().subscribe(data => {
-      this.equations = data;
+      this.equations = data._embedded.equations;
+      for (const equation of this.equations) {
+        this.giphyService.get(equation.name).subscribe(url => equation.giphyUrl = url);
+      }
     });
   }
 

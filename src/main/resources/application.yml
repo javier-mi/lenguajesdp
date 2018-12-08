@@ -17,3 +17,7 @@ spring:
 # security.user.password: admin
 spring.security.user.name: admin
 spring.security.user.password: admin
+
+#Dehabilitar seguridad
+spring.security.basic.enabled: false
+spring.management.security.enabled: false

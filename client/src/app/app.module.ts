@@ -9,13 +9,16 @@ import { EquationsComponent } from './equations/equations.component';
 import { EquationsListComponent } from './equations-list/equations-list.component';
 import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EquationEditComponent } from './equation-edit/equation-edit.component';
 
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     EquationsComponent,
-    EquationsListComponent
+    EquationsListComponent,
+    EquationEditComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatCardModule,
     MatInputModule,
     MatListModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
