@@ -1,3 +1,10 @@
+<script language="javascript">
+	window.onload = function(){
+        var g1 = new Guppy("edit-gumpy");
+        g1.configure('empty_content', "\\color{red}{\\text{[?]}}");
+    }
+</script>
+<div id="edit-gumpy"></div>	
 <mat-card>
   <form #equationForm="ngForm" (ngSubmit)="save(equationForm.value)">
     <mat-card-header>
@@ -7,7 +14,7 @@
       <input type="hidden" name="href" [(ngModel)]="equation.href">
       <mat-form-field>
         <input matInput placeholder="Equation Name" [(ngModel)]="equation.name"
-               required name="name" #name>
+               required name="name" #name />
       </mat-form-field>
     </mat-card-content>
     <mat-card-actions>
