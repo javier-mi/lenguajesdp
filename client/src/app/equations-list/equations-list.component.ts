@@ -14,7 +14,7 @@ export class EquationsListComponent implements OnInit {
 
   ngOnInit() {
     this.equationsService.getAll().subscribe(data => {
-      this.equations = data._embedded.equations;
+      this.equations = data;
       for (const equation of this.equations) {
         this.giphyService.get(equation.name).subscribe(url => equation.giphyUrl = url);
       }

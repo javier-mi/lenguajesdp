@@ -16,8 +16,9 @@ import edu.caece.lenguajesdeprogramacion.tpfinal.domain.Equation;
 import edu.caece.lenguajesdeprogramacion.tpfinal.repository.EquationRepository;
 
 @SpringBootApplication(scanBasePackages= {
-	"edu.caece.lenguajesdeprogramacion.tpfinal.config",
-	"edu.caece.lenguajesdeprogramacion.tpfinal.config.security"
+	"edu.caece.lenguajesdeprogramacion.tpfinal"
+//	"edu.caece.lenguajesdeprogramacion.tpfinal.config",
+//	"edu.caece.lenguajesdeprogramacion.tpfinal.config.security"
 })
 //@ComponentScan(basePackages = { 
 //@EnableAutoConfiguration

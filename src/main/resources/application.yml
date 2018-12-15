@@ -21,3 +21,5 @@ spring.security.user.password: admin
 #Dehabilitar seguridad
 spring.security.basic.enabled: false
 spring.management.security.enabled: false
+
+spring.management.trace.include : remote_address, parameters

@@ -23,7 +23,7 @@ export class EquationsService {
     if (equation['href']) {
       result = this.http.put(equation.href, equation);
     } else {
-      result = this.http.post(this.EQUATION_API, equation);
+      result = this.http.post(this.EQUATION_API + '/save', equation);
     }
     return result;
   }
