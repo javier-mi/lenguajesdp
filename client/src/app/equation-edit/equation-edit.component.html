@@ -26,10 +26,10 @@
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="primary" type="submit"
-              [disabled]="!equationForm.form.valid">Save</button>
+              [disabled]="!equationForm.form.valid">Guardar</button>
       <button mat-raised-button color="secondary" (click)="remove(equation)"
-              *ngIf="equation.id" type="button">Delete</button>
-      <a mat-button routerLink="/equations-list">Cancel</a>
+              *ngIf="equation.id" type="button">Borrar</button>
+      <a mat-button routerLink="/equations-list">Cancelar</a>
     </mat-card-actions>
     <mat-card-footer>
       <div class="giphy" style="display:hidden">

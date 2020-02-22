@@ -31,15 +31,16 @@ export class EquationEditComponent implements OnInit, OnDestroy {
       // Inicializar guppy
       var guppy = new Guppy("edit-guppy");
       guppy.activate();
-      guppy.event("change",function(e){
+      guppy.event("change",(e: any) => {
           try{
                 var fn = e.target.func();
                 var F = function(x){ return fn({"x":x,"pi":Math.PI,"e":Math.E}); };
-              this.plot(F);
+                this.plot(F);
             }
             catch(e){this.draw_axes();}
         });
       this.canvas = new fabric.Canvas('graph');
+      this.draw_axes();
       
     this.sub = this.route.params.subscribe(params => {
       const id = params['id'];

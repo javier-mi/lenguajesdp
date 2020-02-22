@@ -21,10 +21,10 @@ public class Equation {
 	@Column(nullable=false)
 	private String name;
 	
-	@Column
+	@Column(length = 100*1000)
 	private String description;
 	
-	@Column
+	@Column(length = 100*1000)
 	private String equationData;
 
 	public Equation(String name, String description, String equationData) {

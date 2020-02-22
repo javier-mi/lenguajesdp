@@ -3,7 +3,7 @@
   <mat-card-content>
     <mat-list>
       <mat-list-item *ngFor="let equation of equations">
-        <img mat-list-avatar src="{{equation.giphyUrl}}" alt="{{equation.name}}">
+<!--         <img mat-list-avatar src="{{equation.giphyUrl}}" alt="{{equation.name}}"> -->
         <h3 mat-line>
           <a mat-button [routerLink]="['/equation-edit', equation.id]">{{equation.name}}</a>
         </h3>
@@ -12,5 +12,5 @@
     </mat-list>
   </mat-card-content>
   
-  <button mat-fab color="primary" [routerLink]="['/equation-add']">Add</button>
+  <button mat-fab color="primary" [routerLink]="['/equation-add']">Agregar</button>
 </mat-card>
