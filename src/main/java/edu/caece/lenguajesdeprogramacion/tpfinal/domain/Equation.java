@@ -18,7 +18,7 @@ public class Equation {
 	@GeneratedValue
 	private Long id;
 	
-	@Column(nullable=false, unique=true)
+	@Column(nullable=false)
 	private String name;
 	
 	@Column
@@ -26,5 +26,12 @@ public class Equation {
 	
 	@Column
 	private String equationData;
+
+	public Equation(String name, String description, String equationData) {
+		super();
+		this.name = name;
+		this.description = description;
+		this.equationData = equationData;
+	}
 
 }

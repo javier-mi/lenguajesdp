@@ -5,8 +5,9 @@
       <mat-list-item *ngFor="let equation of equations">
         <img mat-list-avatar src="{{equation.giphyUrl}}" alt="{{equation.name}}">
         <h3 mat-line>
-          <a mat-button [routerLink]="['/equations-edit', equation.id]">{{equation.name}}</a>
+          <a mat-button [routerLink]="['/equation-edit', equation.id]">{{equation.name}}</a>
         </h3>
+<!--         <div id="equation{{equation.id}}" style="width: 400px;height:40px"></div> -->
       </mat-list-item>
     </mat-list>
   </mat-card-content>
